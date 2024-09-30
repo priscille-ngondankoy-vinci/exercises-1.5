@@ -2,7 +2,7 @@ import { Router, Request, Response } from 'express';
 
 const router = Router();
 
-// Hardcoding de trois films dans un tableau
+
 
 // exercice 1.1
 const films = [
@@ -71,10 +71,11 @@ router.get('/', (req: Request, res: Response) => {
   });
   
   // POST /films - Créer un nouveau film
+  // POST /films - Afficher erreur client
   router.post('/', (req: Request, res: Response) => {
     const { title, director, duration, budget, description, imageUrl } = req.body;
-  
-    // Validation des champs obligatoires
+
+     // Validation des champs obligatoires
     if (!title || !director || !duration) {
       return res.status(400).json({ error: 'Missing required fields: title, director, and duration' });
     }

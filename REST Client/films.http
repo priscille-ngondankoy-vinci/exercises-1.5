@@ -1,0 +1,2 @@
+### Delete a film
+DELETE {{baseUrl}}/films/2
